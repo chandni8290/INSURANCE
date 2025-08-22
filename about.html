@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Insurance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('history') }}">History</a>
+    </div>
+
+    <div class="container">
+        <h2>📘 About This App</h2>
+        <p>
+            This web application predicts the estimated <strong>insurance cost</strong> for an individual based on
+            various health and demographic factors.
+        </p>
+        <p>
+            The model is trained using a dataset containing age, gender, BMI, number of children, smoking status, and region.
+        </p>
+        <ul>
+            <li>📊 Machine Learning Model: RandomForestRegressor</li>
+            <li>🔍 Predicts insurance charges accurately from user inputs</li>
+            <li>🧠 Built using Python, Pandas, Scikit-learn, Flask</li>
+        </ul>
+        <p>
+            This project is ideal for learning ML deployment and understanding how health metrics affect insurance pricing.
+        </p>
+    </div>
+</body>
+</html>

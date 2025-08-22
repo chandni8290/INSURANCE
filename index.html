@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance Cost Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('history') }}">History</a>
+    </div>
+
+    <div class="container">
+        <h2>🧾 Insurance Cost Predictor</h2>
+
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Sex:</label>
+            <input type="text" name="sex" placeholder="male or female" required>
+
+            <label>BMI:</label>
+            <input type="number" name="bmi" step="0.1" required>
+
+            <label>Children:</label>
+            <input type="number" name="children" required>
+
+            <label>Smoker:</label>
+            <input type="text" name="smoker" placeholder="yes or no" required>
+
+            <label>Region:</label>
+            <input type="text" name="region" placeholder="southwest, southeast..." required>
+
+            <button type="submit">🔍 Predict Insurance Cost</button>
+        </form>
+    </div>
+</body>
+</html>
